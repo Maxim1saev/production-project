@@ -1,13 +1,15 @@
-import { useState } from "react"
-import classes from './styles.module.scss'
+import { useState } from "react";
+import { useTranslation } from "react-i18next";
+import classes from "./styles.module.scss";
 
- const AboutPage = ()=>{
+const AboutPage = () => {
+  const { t } = useTranslation("about");
 
-    return (
-        <>
-AboutPage
-        </>
-    )
-}
+  return (
+    <>
+      <h1>{t("about page")}</h1>;
+    </>
+  );
+};
 
-export default AboutPage
+export default AboutPage;

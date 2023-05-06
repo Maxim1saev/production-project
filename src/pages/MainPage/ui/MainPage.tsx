@@ -1,14 +1,16 @@
-import { useState } from "react"
-import { deflate } from "zlib"
-import classes from './styles.module.scss'
+import { useState } from "react";
+import { useTranslation } from "react-i18next";
+import { deflate } from "zlib";
+import classes from "./styles.module.scss";
 
-export const MainPage = ()=>{
+export const MainPage = () => {
+  const { t } = useTranslation();
 
-    return (
-        <>
-            MainPage
-        </>
-    )
-}
+  return (
+    <>
+      <h1>{t("main page")}</h1>;
+    </>
+  );
+};
 
-export default MainPage
+export default MainPage;
