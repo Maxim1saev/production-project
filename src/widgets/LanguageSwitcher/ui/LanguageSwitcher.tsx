@@ -21,7 +21,7 @@ export const LanguageSwitcher: FC<ILanguageSwitcherProp> = ({
 
   return (
     <Button
-      className={classNames(cls.root, {}, [className])}
+      className={classNames('', {}, [className])}
       onClick={toggleLang}
     >
       {t('language')}

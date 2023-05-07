@@ -1,13 +1,12 @@
-@import 'reset.scss';
-@import 'themes/dark.scss';
-@import 'themes/light.scss';
-@import 'variables/global.scss';
+@import "reset";
+@import "themes/dark";
+@import "themes/light";
+@import "variables/global";
 
 .app {
     font: var(--font-m);
     background-color: var(--bg-color);
     color: var(--primary-color);
-
     min-height: 100vh;
 }
 
@@ -16,6 +15,6 @@
 }
 
 .page-wrapper {
-    flex-grow: 1; 
+    flex-grow: 1;
     padding: 20px;
 }

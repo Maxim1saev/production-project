@@ -15,7 +15,8 @@ module.exports = {
     project: ['./tsconfig.json']
   },
   plugins: [
-    'react'
+    'react',
+    'i18next'
   ],
   rules: {
     '@typescript-eslint/no-unused-vars': 1,
@@ -30,6 +31,7 @@ module.exports = {
     '@typescript-eslint/object-curly-spacing': 0,
     '@typescript-eslint/no-floating-promises': 0,
     '@typescript-eslint/no-misused-promises': 0,
-    '@typescript-eslint/naming-convention': 0
+    '@typescript-eslint/naming-convention': 0,
+    'i18next/no-literal-string': [1, { markupOnly: true }]
   }
 };

@@ -1,8 +1,9 @@
-import type webpack from 'webpack';
+/* eslint-disable @typescript-eslint/consistent-type-imports */
+import webpack from 'webpack';
 import path from 'path';
 
 import { buildWebpackConfig } from './config/webpack/buildWebpackConfig';
-import { type BuildEnv } from './config/webpack/types/config';
+import { BuildEnv } from './config/webpack/types/config';
 
 export default (env: BuildEnv) => {
   const mode = env.mode || 'development';
