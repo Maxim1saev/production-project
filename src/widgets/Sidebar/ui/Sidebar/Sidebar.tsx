@@ -1,12 +1,14 @@
-import React, { FC, useState } from "react";
-import { classNames } from "shared/lib/classNames";
-import { LanguageSwitcher } from "widgets/LanguageSwitcher";
-import { ThemeSwitcher } from "widgets/ThemeSwitcher";
-import cls from "./Sidebar.module.scss";
+import { type FC, useState } from 'react';
+import { classNames } from 'shared/lib/classNames';
+import { LanguageSwitcher } from 'widgets/LanguageSwitcher';
+import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
+import cls from './Sidebar.module.scss';
 
 interface ISidebarProp {
-  className?: string;
+  className?: string
 }
+
+let a;
 
 export const Sidebar: FC<ISidebarProp> = ({ className }) => {
   const [collapsed, setCollapsed] = useState(false);
@@ -17,7 +19,7 @@ export const Sidebar: FC<ISidebarProp> = ({ className }) => {
   return (
     <div
       className={classNames(cls.root, { [cls.collapsed]: collapsed }, [
-        className,
+        className
       ])}
     >
       <button onClick={handleToggle}>Toggle</button>

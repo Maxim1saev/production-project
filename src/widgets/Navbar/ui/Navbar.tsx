@@ -1,10 +1,10 @@
-import { FC } from "react";
-import { classNames } from "shared/lib/classNames";
-import { ELinkViews, Link } from "shared/ui/Link/Link";
-import cls from "./Navbar.module.scss";
+import { type FC } from 'react';
+import { classNames } from 'shared/lib/classNames';
+import { ELinkViews, Link } from 'shared/ui/Link/Link';
+import cls from './Navbar.module.scss';
 
 interface INavbarProp {
-  className?: string;
+  className?: string
 }
 
 export const Navbar: FC<INavbarProp> = ({ className }) => {

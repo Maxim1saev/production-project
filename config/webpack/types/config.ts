@@ -2,20 +2,20 @@
 export type TMode = 'development' | 'production'
 
 export interface IPaths {
-    entry: string
-    build: string
-    html: string
-    src: string
+  entry: string
+  build: string
+  html: string
+  src: string
 }
 
 export interface BuildOptions {
-    isDev: boolean
-    mode: TMode
-    paths: IPaths
-    port: number
+  isDev: boolean
+  mode: TMode
+  paths: IPaths
+  port: number
 }
 
 export interface BuildEnv {
-    mode: TMode
-    port: number
+  mode: TMode
+  port: number
 }

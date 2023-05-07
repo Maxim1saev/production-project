@@ -1,17 +1,17 @@
-import { FC } from "react";
-import { Link as RouterLink, LinkProps } from "react-router-dom";
+import { type FC } from 'react';
+import { Link as RouterLink, type LinkProps } from 'react-router-dom';
 
-import { classNames } from "shared/lib/classNames";
-import cls from "./Link.module.scss";
+import { classNames } from 'shared/lib/classNames';
+import cls from './Link.module.scss';
 
 export enum ELinkViews {
-  PRIMARY = "primary",
-  SECONDARY = "secondary",
+  PRIMARY = 'primary',
+  SECONDARY = 'secondary',
 }
 
 interface ILinkProp extends LinkProps {
-  className?: string;
-  view?: ELinkViews;
+  className?: string
+  view?: ELinkViews
 }
 
 export const Link: FC<ILinkProp> = ({

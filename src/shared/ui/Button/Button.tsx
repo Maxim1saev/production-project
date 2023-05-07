@@ -1,15 +1,15 @@
-import { ButtonHTMLAttributes, FC } from "react";
+import { type ButtonHTMLAttributes, type FC } from 'react';
 
-import { classNames } from "shared/lib/classNames";
-import cls from "./Button.module.scss";
+import { classNames } from 'shared/lib/classNames';
+import cls from './Button.module.scss';
 
 export enum EButtonViews {
-  CLEAR = "clear",
+  CLEAR = 'clear',
 }
 
 interface IButtonProp extends ButtonHTMLAttributes<HTMLButtonElement> {
-  className?: string;
-  view?: EButtonViews;
+  className?: string
+  view?: EButtonViews
 }
 
 export const Button: FC<IButtonProp> = ({
