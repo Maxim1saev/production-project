@@ -2,5 +2,7 @@
   "translate": "translate",
   "main page": "Main page",
   "language": "RU",
-  "new": 0
+  "not found page": "Page not found",
+  "error message": "Something went wrong",
+  "reload page": "Reload page"
 }

@@ -1,5 +1,8 @@
 {
   "translate": "перевести",
   "main page": "Главная страница",
-  "language": "EN"
+  "language": "EN",
+  "not found page": "Страница не найдена",
+  "error message": "Произошла какая-то ошибка",
+  "reload page": "Обновить страницу"
 }
