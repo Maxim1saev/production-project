@@ -1,6 +1,6 @@
 import { type FC } from 'react';
 import { useTheme } from 'app/providers/ThemeProvider';
-import { classNames } from 'shared/lib/classNames';
+import { classNames } from 'shared/lib/classNames/classNames';
 import cls from './ThemeSwitcher.module.scss';
 import LightThemeIcons from 'shared/assets/icons/theme-light.svg';
 import DarkThemeIcons from 'shared/assets/icons/theme-dark.svg';

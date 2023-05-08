@@ -1,5 +1,5 @@
 import { type FC } from 'react';
-import { classNames } from 'shared/lib/classNames';
+import { classNames } from 'shared/lib/classNames/classNames';
 import { ELinkViews, Link } from 'shared/ui/Link/Link';
 import cls from './Navbar.module.scss';
 

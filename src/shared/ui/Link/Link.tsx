@@ -1,7 +1,7 @@
 import { type FC } from 'react';
 import { Link as RouterLink, type LinkProps } from 'react-router-dom';
 
-import { classNames } from 'shared/lib/classNames';
+import { classNames } from 'shared/lib/classNames/classNames';
 import cls from './Link.module.scss';
 
 export enum ELinkViews {
