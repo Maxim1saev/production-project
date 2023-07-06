@@ -1,23 +1,20 @@
-import { type FC } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
-import { ELinkViews, Link } from 'shared/ui/Link/Link';
+import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
 import cls from './Navbar.module.scss';
 
-interface INavbarProp {
-  className?: string
+interface NavbarProps {
+    className?: string;
 }
 
-export const Navbar: FC<INavbarProp> = ({ className }) => {
-  return (
-    <div className={classNames(cls.navbar, {}, [className])}>
-      <div className={cls.links}>
-        <Link view={ELinkViews.SECONDARY} to="/">
-          Главная
-        </Link>
-        <Link view={ELinkViews.SECONDARY} to="/about">
-          about
-        </Link>
-      </div>
+export const Navbar = ({ className }: NavbarProps) => (
+    <div className={classNames(cls.Navbar, {}, [className])}>
+        <div className={cls.links}>
+            <AppLink theme={AppLinkTheme.SECONDARY} to="/" className={cls.mainLink}>
+                Главная
+            </AppLink>
+            <AppLink theme={AppLinkTheme.RED} to="/about">
+                О сайте
+            </AppLink>
+        </div>
     </div>
-  );
-};
+);

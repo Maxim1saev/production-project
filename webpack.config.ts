@@ -1,28 +1,27 @@
-/* eslint-disable @typescript-eslint/consistent-type-imports */
 import webpack from 'webpack';
 import path from 'path';
-
-import { buildWebpackConfig } from './config/webpack/buildWebpackConfig';
-import { BuildEnv } from './config/webpack/types/config';
+import { buildWebpackConfig } from './config/build/buildWebpackConfig';
+import { BuildEnv, BuildPaths } from './config/build/types/config';
 
 export default (env: BuildEnv) => {
-  const mode = env.mode || 'development';
+    const paths: BuildPaths = {
+        entry: path.resolve(__dirname, 'src', 'index.tsx'),
+        build: path.resolve(__dirname, 'build'),
+        html: path.resolve(__dirname, 'public', 'index.html'),
+        src: path.resolve(__dirname, 'src'),
+    };
 
-  const isDev = mode === 'development';
+    const mode = env.mode || 'development';
+    const PORT = env.port || 3000;
 
-  const PORT = env.port || 3000;
+    const isDev = mode === 'development';
 
-  const config: webpack.Configuration = buildWebpackConfig({
-    mode,
-    paths: {
-      entry: path.resolve(__dirname, 'src', 'index.tsx'),
-      build: path.resolve(__dirname, 'build'),
-      html: path.resolve(__dirname, 'public', 'index.html'),
-      src: path.resolve(__dirname, 'src')
-    },
-    isDev,
-    port: PORT
-  });
+    const config: webpack.Configuration = buildWebpackConfig({
+        mode,
+        paths,
+        isDev,
+        port: PORT,
+    });
 
-  return config;
+    return config;
 };

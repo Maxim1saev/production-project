@@ -1,8 +1,11 @@
 {
-  "translate": "translate",
-  "main page": "Main page",
-  "language": "RU",
-  "not found page": "Page not found",
-  "error message": "Something went wrong",
-  "reload page": "Reload page"
+  "Тестовый пример": "Test example",
+  "Перевод": "Translate",
+  "Главная страница": "Main page",
+  "Язык": "English",
+  "новый перевод": "новый перевод",
+  "Страница не найдена": "Page not found",
+  "Произошла непредвиденная ошибка": "Произошла непредвиденная ошибка",
+  "Обновить страницу": "Обновить страницу",
+  "throw error": "throw error"
 }
