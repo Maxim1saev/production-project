@@ -29,7 +29,7 @@
     "@storybook/addon-essentials": "^7.0.20",
     "@storybook/addon-interactions": "^7.0.20",
     "@storybook/addon-links": "^7.0.20",
-    "@storybook/blocks": "^7.0.20",
+    "@storybook/blocks": "docker",
     "@storybook/react": "^7.0.26",
     "@storybook/react-webpack5": "^7.0.20",
     "@storybook/testing-library": "^0.0.14-next.2",
@@ -62,7 +62,7 @@
     "html-webpack-plugin": "^5.5.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.5.1",
-    "loki": "^0.28.1",
+    "loki": "^0.32.0",
     "mini-css-extract-plugin": "^2.5.3",
     "regenerator-runtime": "^0.13.9",
     "sass": "^1.49.9",
@@ -93,14 +93,14 @@
   "loki": {
     "configurations": {
       "chrome.laptop": {
-        "target": "chrome.app",
+        "target": "chrome.docker",
         "width": 1366,
         "height": 768,
         "deviceScaleFactor": 1,
         "mobile": false
       },
       "chrome.iphone7": {
-        "target": "chrome.app",
+        "target": "chrome.docker",
         "preset": "iPhone 7"
       }
     }
