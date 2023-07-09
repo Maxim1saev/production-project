@@ -1,8 +1,6 @@
 import { Preview } from '@storybook/react';
 import { RouterDecorator } from './RouterDecorator';
-
 import { StyleDecorator } from './StyleDecorator';
-// import 'loki/configure-react'; 
 
 const preview: Preview = {
     parameters: {
@@ -18,7 +16,6 @@ const preview: Preview = {
     decorators: [
         StyleDecorator,
         RouterDecorator,
-    // ThemeDecorator(Theme.DARK),
     ],
 };
 
