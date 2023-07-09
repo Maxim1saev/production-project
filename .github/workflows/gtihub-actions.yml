@@ -28,6 +28,8 @@ jobs:
         run: npm run lint:scss
       - name: unit testing
         run: npm run test:unit
+      - name: Install Chrome
+        uses: brew cask install google-chrome-canary
       - name: Telegram Notification
         uses: appleboy/telegram-action@master
         with:
