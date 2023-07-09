@@ -22,12 +22,25 @@ jobs:
         run: npm install --legacy-peer-deps
       - name: build production project
         run: npm run build:prod
-      # - name: linting typescript
-      #   run: npm run lint:ts
-      # - name: linting css
-      #   run: npm run lint:scss
-      # - name: unit testing
-      #   run: npm run test:unit
+      - name: linting typescript
+        run: npm run lint:ts
+      - name: linting css
+        run: npm run lint:scss
+      - name: unit testing
+        run: npm run test:unit
+      - name: Telegram Notification
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.TELEGRAM_CHAT_ID }}
+          token: ${{ secrets.TELEGRAM_TOKEN }}
+          message: |
+            ${{ github.actor }} created commit:
+            Commit message: ${{ github.event.commits[0].message }}
+
+            Repository: ${{ github.repository }}
+
+            See changes: https://github.com/${{ github.repository }}/commit/${{github.sha}}
+
       - name: storybook build
         run: npm run storybook:build
       - name: screenshot testing
