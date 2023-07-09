@@ -1,8 +1,9 @@
+import { Preview } from '@storybook/react';
 import { RouterDecorator } from './RouterDecorator';
 import { StyleDecorator } from './StyleDecorator';
 import 'loki/configure-react';
 
-const preview = {
+const preview: Preview = {
     parameters: {
         actions: { argTypesRegex: '^on[A-Z].*' },
         controls: {
