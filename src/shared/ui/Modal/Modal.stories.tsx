@@ -19,12 +19,12 @@ export const Primary: Story = {
     },
 };
 
-export const Dark: Story = {
-    args: {
-        isOpen: true,
-        children: 'Text Text Text Text Text TextText Text Text Text Text TextText Text Text Text Text TextText Text Text Text Text TextText Text Text Text Text TextText Text Text Text Text Text',
-    },
-    decorators: [
-        ThemeDecorator(Theme.DARK),
-    ],
-};
+// export const Dark: Story = {
+//     args: {
+//         isOpen: true,
+//         children: 'Text Text Text Text Text TextText Text Text Text Text TextText Text Text Text Text TextText Text Text Text Text TextText Text Text Text Text TextText Text Text Text Text Text',
+//     },
+//     decorators: [
+//         ThemeDecorator(Theme.DARK),
+//     ],
+// };
