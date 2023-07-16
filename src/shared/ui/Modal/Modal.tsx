@@ -2,7 +2,6 @@ import React, {
     useCallback, useEffect, useRef, useState,
 } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
-import { Portal } from '../Portal/Portal';
 import cls from './Modal.module.scss';
 
 interface IModalProps {
@@ -49,30 +48,28 @@ export const Modal = ({
     useEffect(() => {
         if (isOpen) {
             window.addEventListener('keydown', onKeyDown);
+        } else {
+            return () => {
+                clearTimeout(timerRed.current);
+
+                window.removeEventListener('keydown', onKeyDown);
+            };
         }
-
-        return () => {
-            clearTimeout(timerRed.current);
-
-            window.removeEventListener('keydown', onKeyDown);
-        };
     }, [isOpen, onKeyDown]);
 
     return (
-        <Portal>
-            <div className={classNames(cls.root, mods, [className])}>
+        <div className={classNames(cls.root, mods, [className])}>
 
-                <div className={cls.overlay} onClick={closeHandler}>
-                    <div
-                        className={cls.content}
-                        onClick={onContentClick}
-                    >
+            <div className={cls.overlay} onClick={closeHandler}>
+                <div
+                    className={cls.content}
+                    onClick={onContentClick}
+                >
 
-                        {children}
+                    {children}
 
-                    </div>
                 </div>
             </div>
-        </Portal>
+        </div>
     );
 };

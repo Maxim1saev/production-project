@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { Modal } from 'shared/ui/Modal/Modal';
+import { Portal } from 'shared/ui/Portal/Portal';
 import cls from './Navbar.module.scss';
 
 interface NavbarProps {
@@ -23,9 +24,11 @@ export const Navbar = ({ className }: NavbarProps) => {
                 {t('Войти')}
             </Button>
 
-            <Modal isOpen={isAuthModal} onClose={onToggleModal}>
-                Это не финальное состояние модального окна, в ходе всего курса мы будем его менять\рефакторить. Также прошу заметить, что переопределение переменных из темы это АНТИПАТЕРН! Так делать не стоит. Пока оставьте так, а через 1-2 урока мы это пофиксим.
-            </Modal>
+            <Portal>
+                <Modal isOpen={isAuthModal} onClose={onToggleModal}>
+                    Это не финальное состояние модального окна, в ходе всего курса мы будем его менять\рефакторить. Также прошу заметить, что переопределение переменных из темы это АНТИПАТЕРН! Так делать не стоит. Пока оставьте так, а через 1-2 урока мы это пофиксим.
+                </Modal>
+            </Portal>
         </div>
     );
 };

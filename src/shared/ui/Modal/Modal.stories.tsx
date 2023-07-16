@@ -15,7 +15,7 @@ export default meta;
 export const Primary: Story = {
     args: {
         isOpen: true,
-        children: 'Text Text Text Text Text TextText Text Text Text Text TextText Text Text Text Text TextText Text Text Text Text TextText Text Text Text Text TextText Text Text Text Text Text',
+        children: 'Text Text Text Text Text Text Text Text TextText Text Text Text Text TextText Text Text Text Text Text',
     },
 };
 
