@@ -45,6 +45,7 @@ export const Modal = ({
         }
     }, [closeHandler]);
 
+    // eslint-disable-next-line consistent-return
     useEffect(() => {
         if (isOpen) {
             window.addEventListener('keydown', onKeyDown);
