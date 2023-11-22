@@ -8,6 +8,11 @@ import { Sidebar } from 'widgets/Sidebar';
 function App() {
     const { theme } = useTheme();
 
+    console.log('test1');
+    console.log('test2');
+    console.log('test AMEND');
+    console.log('test AMEND @@@@@');
+
     return (
         <div className={classNames('app', {}, [theme])}>
             <Suspense fallback="">
